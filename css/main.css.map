@@ -3,6 +3,7 @@
     "mappings": "",
     "sources": [
         "../sass/main.scss",
+        "../sass/abstracts/_gradients.scss",
         "../sass/abstracts/_variables.scss"
     ],
     "names": [],
