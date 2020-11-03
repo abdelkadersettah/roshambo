@@ -1,4 +1,16 @@
 :root {
+  --primary-font: 'Barlow Semi Condensed', sans-serif;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-size-base: 1rem;
+  --font-size-sm: --font-size-base * 0.875;
+  --font-size-lg: --font-size-base * 1.25;
+  --dark-text-color: hsl(229, 25%, 31%);
+  --score-text-color: hsl(229, 64%, 46%);
+  --header-outline-color: hsl(217, 16%, 45%);
+}
+
+:root {
   box-sizing: border-box;
 }
 
@@ -27,27 +39,10 @@ a:active {
   color: inherit;
 }
 
-html {
-  font-size: 62.5%;
-}
-
-.body {
+body {
   font-family: var(--primary-font);
-  font-size: var(--font-size-primary);
+  font-size: var(--font-size-base);
   line-height: 1.5;
-  color: var(--text-color-primary);
-}
-
-.body--dark {
-  --background-primary: var(--dark-blue);
-  --background-secondary: var(--very-dark-blue-1);
-  --text-color-primary: var(--white);
-  --shadow-color-primary: var(--very-dark-blue-2);
-}
-
-h1,
-h2,
-h3 {
-  font-size: inherit;
+  color: var(--primary-color);
 }
 /*# sourceMappingURL=main.css.map */
