@@ -3,12 +3,23 @@
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
   --font-size-base: 1rem;
-  --font-size-sm: --font-size-base * 0.875;
-  --font-size-lg: --font-size-base * 1.25;
+  --font-size-sm: calc(var(--font-size-base) * 0.875);
+  --font-size-lg: calc(var(--font-size-base) * 1.25);
+  --font-size-xlg: calc(var(--font-size-base) * 2);
   --dark-text-color: hsl(229, 25%, 31%);
   --score-text-color: hsl(229, 64%, 46%);
   --header-outline-color: hsl(217, 16%, 45%);
-  --white-color: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
+  --margin-base: 1em;
+  --margin-xsm: calc(var(--margin-base) * 0.5);
+  --margin-sm: calc(var(--margin-base) * 0.875);
+  --margin-lg: calc(var(--margin-base) * 1.25);
+  --margin-xlg: calc(var(--margin-base) * 2);
+  --padding-base: 1em;
+  --padding-xsm: calc(var(--padding-base) * 0.5);
+  --padding-sm: calc(var(--padding-base) * 0.875);
+  --padding-lg: calc(var(--padding-base) * 1.25);
+  --padding-xlg: calc(var(--padding-base) * 2);
 }
 
 :root {
@@ -44,7 +55,51 @@ body {
   font-family: var(--primary-font);
   font-size: var(--font-size-base);
   line-height: 1.5;
-  color: var(--primary-color);
-  background-color: var(--header-outline-color);
+  background-image: radial-gradient(circle closest-corner, #1f3756 -20%, #1f3756);
+  color: var(--white);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid var(--header-outline-color);
+  border-radius: 0.4em;
+  padding: var(--padding-xlg) var(--padding-lg);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: var(--margin-lg);
+}
+
+.header__icon {
+  align-self: center;
+}
+
+.header__icon--img {
+  width: 80%;
+}
+
+.header__score {
+  background-color: var(--white);
+  border-radius: 0.4em;
+  padding: var(--padding-xsm) var(--padding-xlg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: initial;
+  transform: scale(1.1, 1.4);
+}
+
+.header__score--title {
+  color: var(--score-text-color);
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.2em;
+}
+
+.header__score--number {
+  color: var(--dark-text-color);
+  font-size: var(--font-size-xlg);
+  transform: scale(1.5);
 }
 /*# sourceMappingURL=main.css.map */

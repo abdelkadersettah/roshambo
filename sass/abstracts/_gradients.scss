@@ -1,4 +1,4 @@
-@mixin gradient-radial($inner-color: red, $outer-color: yellow) {
+@mixin gradient-radial($inner-color: #1f3756, $outer-color: #141539) {
   background-image: radial-gradient(
     circle closest-corner,
     $inner-color -20%,

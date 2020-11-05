@@ -27,6 +27,7 @@ a:active {
   background-color: transparent;
   color: inherit;
 }
+
 html {
   // font-size: 62.5%; // 62.5= 10px/16px => 1rem == 10px;
 }
@@ -34,6 +35,6 @@ body {
   font-family: var(--primary-font);
   font-size: var(--font-size-base);
   line-height: 1.5;
-  color: var(--primary-color);
-  background-color: var(--header-outline-color);
+  @include gradient-radial();
+  color: var(--white);
 }
