@@ -8,6 +8,7 @@
   --dark-text-color: hsl(229, 25%, 31%);
   --score-text-color: hsl(229, 64%, 46%);
   --header-outline-color: hsl(217, 16%, 45%);
+  --white-color: hsl(0, 0%, 100%);
 }
 
 :root {
@@ -44,5 +45,6 @@ body {
   font-size: var(--font-size-base);
   line-height: 1.5;
   color: var(--primary-color);
+  background-color: var(--header-outline-color);
 }
 /*# sourceMappingURL=main.css.map */
