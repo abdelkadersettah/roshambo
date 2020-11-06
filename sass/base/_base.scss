@@ -38,3 +38,6 @@ body {
   @include gradient-radial();
   color: var(--white);
 }
+.game-select {
+  height: 80vh;
+}

@@ -22,6 +22,13 @@
   --padding-xlg: calc(var(--padding-base) * 2);
 }
 
+/*
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+*/
 :root {
   box-sizing: border-box;
 }
@@ -57,6 +64,10 @@ body {
   line-height: 1.5;
   background-image: radial-gradient(circle closest-corner, #1f3756 -20%, #1f3756);
   color: var(--white);
+}
+
+.game-select {
+  height: 80vh;
 }
 
 .header {
@@ -103,17 +114,42 @@ body {
   transform: scale(1.5);
 }
 
-.game-section {
-  display: block;
+.game-select {
+  margin-top: var(--margin-xlg);
+  background-color: white;
+}
+
+.game-menu {
+  background-color: red;
   background-image: url(/images/bg-triangle.svg);
-  background-size: 100%;
-  height: 600vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .game-menu__items {
-  display: inline-block;
-  border: 20px solid;
+  height: 8em;
+  width: 8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  background-color: var(--white);
+}
+
+[data-items='paper'] {
+  /* Attribute has this exact value */
+  background-image: radial-gradient(circle at center, white 50%, #4865f4 50%, #5671f5);
+  top: 0;
+}
+
+[data-items='scissors'] {
+  /* Attribute has this exact value */
+  background-image: radial-gradient(circle at center, white 50%, #ec9e0e 50%, #eca922);
+  transform: translate(200%, -100%);
+}
+
+[data-items='rock'] {
+  /* Attribute has this exact value */
+  background-image: radial-gradient(circle at center, white 50%, #dc2e4e 50%, #dd405d);
+  transform: translate(100%, 0%);
 }
 /*# sourceMappingURL=main.css.map */

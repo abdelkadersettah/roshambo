@@ -1,17 +1,35 @@
 .game-menu {
+  background-color: red;
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
   &__items {
-    // display: inline-block;
-    // border-radius: 50%;
-
-    // border: 20px solid;
-    display: inline-block;
-
-    border: 20px solid;
+    height: 8em;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
-    background-color: var(--white);
   }
   &__img {
     // // padding: 3em;
     // background-color: white;
   }
+}
+[data-items='paper'] {
+  /* Attribute has this exact value */
+  @include gradient-radial-game-items(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  //transform: translate(-100%);
+  top: 0;
+}
+[data-items='scissors'] {
+  /* Attribute has this exact value */
+  @include gradient-radial-game-items(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  transform: translate(200%, -100%);
+}
+[data-items='rock'] {
+  /* Attribute has this exact value */
+  @include gradient-radial-game-items(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  transform: translate(100%, 0%);
 }
