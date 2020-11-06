@@ -1,0 +1,17 @@
+.game-menu {
+  &__items {
+    // display: inline-block;
+    // border-radius: 50%;
+
+    // border: 20px solid;
+    display: inline-block;
+
+    border: 20px solid;
+    border-radius: 50%;
+    background-color: var(--white);
+  }
+  &__img {
+    // // padding: 3em;
+    // background-color: white;
+  }
+}

@@ -102,4 +102,18 @@ body {
   font-size: var(--font-size-xlg);
   transform: scale(1.5);
 }
+
+.game-section {
+  display: block;
+  background-image: url(/images/bg-triangle.svg);
+  background-size: 100%;
+  height: 600vh;
+}
+
+.game-menu__items {
+  display: inline-block;
+  border: 20px solid;
+  border-radius: 50%;
+  background-color: var(--white);
+}
 /*# sourceMappingURL=main.css.map */
