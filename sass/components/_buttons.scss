@@ -1,0 +1,14 @@
+.btn {
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.1em;
+  padding: 0.6em 2.2em;
+  font-weight: var(--font-weight-semi-bold);
+  border-radius: var(--radius-base);
+  &__rules {
+    @include border-base(2px);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: var(--margin-xxlg);
+  }
+}

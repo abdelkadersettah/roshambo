@@ -29,10 +29,15 @@
   --margin-sm: calc(var(--margin-base) * 0.875);
   --margin-lg: calc(var(--margin-base) * 1.25);
   --margin-xlg: calc(var(--margin-base) * 2);
+  --margin-xxlg: calc(var(--margin-base) * 2.5);
+
   // padding
   --padding-base: 1em;
   --padding-xsm: calc(var(--padding-base) * 0.5);
   --padding-sm: calc(var(--padding-base) * 0.875);
   --padding-lg: calc(var(--padding-base) * 1.25);
   --padding-xlg: calc(var(--padding-base) * 2);
+  --padding-xxlg: calc(var(--padding-base) * 2.5);
+  // radius;
+  --radius-base: 0.4em;
 }

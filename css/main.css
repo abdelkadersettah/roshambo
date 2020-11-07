@@ -15,11 +15,14 @@
   --margin-sm: calc(var(--margin-base) * 0.875);
   --margin-lg: calc(var(--margin-base) * 1.25);
   --margin-xlg: calc(var(--margin-base) * 2);
+  --margin-xxlg: calc(var(--margin-base) * 2.5);
   --padding-base: 1em;
   --padding-xsm: calc(var(--padding-base) * 0.5);
   --padding-sm: calc(var(--padding-base) * 0.875);
   --padding-lg: calc(var(--padding-base) * 1.25);
   --padding-xlg: calc(var(--padding-base) * 2);
+  --padding-xxlg: calc(var(--padding-base) * 2.5);
+  --radius-base: 0.4em;
 }
 
 /*
@@ -66,16 +69,11 @@ body {
   color: var(--white);
 }
 
-.game-select {
-  height: 80vh;
-  position: relative;
-}
-
 .header {
   display: flex;
   justify-content: space-between;
   border: 3px solid var(--header-outline-color);
-  border-radius: 0.4em;
+  border-radius: var(--radius-base);
   padding: var(--padding-xlg) var(--padding-lg);
   width: 90%;
   margin: 0 auto;
@@ -116,7 +114,10 @@ body {
 }
 
 .game-select {
-  margin-top: var(--margin-xlg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
 }
 
 .game-menu {
@@ -153,5 +154,21 @@ body {
   /* Attribute has this exact value */
   background-image: radial-gradient(circle at center, white 50%, #dc2e4e 50%, #dd405d);
   transform: translate(50%, -50%);
+}
+
+.btn {
+  text-transform: uppercase;
+  font-size: var(--font-size-sm);
+  letter-spacing: 0.1em;
+  padding: 0.6em 2.2em;
+  font-weight: var(--font-weight-semi-bold);
+  border-radius: var(--radius-base);
+}
+
+.btn__rules {
+  border: 2px solid var(--header-outline-color);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: var(--margin-xxlg);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,8 +1,8 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 3px solid var(--header-outline-color);
-  border-radius: 0.4em;
+  @include border-base();
+  border-radius: var(--radius-base);
   padding: var(--padding-xlg) var(--padding-lg);
   width: 90%;
   margin: 0 auto;
@@ -41,5 +41,8 @@
   }
 }
 .game-select {
-  margin-top: var(--margin-xlg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
 }

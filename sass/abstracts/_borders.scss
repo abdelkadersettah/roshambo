@@ -1,0 +1,6 @@
+@mixin border-base(
+  $inner-weight: 3px,
+  $inner-color: var(--header-outline-color)
+) {
+  border: $inner-weight solid $inner-color;
+}
