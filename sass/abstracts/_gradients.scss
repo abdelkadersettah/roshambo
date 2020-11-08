@@ -1,9 +1,8 @@
-@mixin gradient-radial($inner-color: #1f3756, $outer-color: #141539) {
-  background-image: radial-gradient(
-    circle closest-corner,
-    $inner-color -20%,
-    $inner-color
-  );
+@mixin gradient-radial(
+  $inner-color: hsl(214, 47%, 23%),
+  $outer-color: hsl(237, 49%, 15%)
+) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
 }
 /*
 - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
