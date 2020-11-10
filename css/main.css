@@ -124,9 +124,12 @@ body {
   background-image: url(/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 16em;
-  width: 16em;
+  background-size: 100%;
+  max-width: 16em;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .game-menu__items {
@@ -147,13 +150,16 @@ body {
 [data-items='scissors'] {
   /* Attribute has this exact value */
   background-image: radial-gradient(circle at center, white 50%, #ec9e0e 50%, #eca922);
-  transform: translate(125%, -75%);
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 2;
+  align-self: center;
+  justify-self: center;
 }
 
 [data-items='rock'] {
   /* Attribute has this exact value */
   background-image: radial-gradient(circle at center, white 50%, #dc2e4e 50%, #dd405d);
-  transform: translate(50%, -50%);
+  transform: translate(25%, 25%);
 }
 
 .btn {
