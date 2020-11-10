@@ -132,7 +132,7 @@ body {
   grid-template-rows: repeat(3, 1fr);
 }
 
-.game-menu__items {
+.game-shapes {
   height: 8em;
   width: 8em;
   display: flex;
