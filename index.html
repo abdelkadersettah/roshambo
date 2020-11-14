@@ -42,18 +42,32 @@
 <main>
   <section class="game-select">
     <ul class="game-menu">
-      <li class="game-shapes" data-items="paper"><img class="game-shapes__img" src="./images/icon-paper.svg" alt=" paper" srcset=""></li>
+      <li class="game-shapes" data-items="paper">
+        <img class="game-shapes__img" src="./images/icon-paper.svg" alt=" paper" srcset=""></li>
       <li class="game-shapes" data-items="scissors"><img class="game-shapes__img" src="./images/icon-scissors.svg" alt="scissors" srcset=""></li>
       <li class="game-shapes" data-items="rock"><img class="game-shapes__img" src="./images/icon-rock.svg" alt="rock" srcset=""></li>
     </ul>
-     <button class="btn btn__rules">Rules</button>
+     <button class="btn btn__rules secondary-text">Rules</button>
   </section>
   <section class="game-play">
-    <ul class="game-play__container">
-      <li class="game-shapes game-shapes--selected" data-items="paper"><img class="game-shapes__img" src="./images/icon-paper.svg" alt=" paper" srcset=""></li>
-      <li class="game-shapes game-shapes--selected" data-items="scissors"><img class="game-shapes__img" src="./images/icon-scissors.svg" alt="scissors" srcset=""></li>
+    <ul class="game-play__user">
+            <li class="game-shapes" data-items="rock">
+        <img class="game-shapes__img" src="./images/icon-rock.svg" alt="rock" srcset="">
+              </li>
+      <h2 class="secondary-text game-shapes__text">You picked</h2>
     </ul>
-    <button class="btn btn__rules">Rules</button>
+    <ul class="game-play__house">
+      <li class="game-shapes" data-items="paper">
+  <img class="game-shapes__img" src="./images/icon-paper.svg" alt="paper" srcset="">
+        </li>
+<h2 class="secondary-text game-shapes__text">The house picked</h2>
+</ul>
+<ul class="game-play__result">
+  <li><h2 class="game-play__result--text primary-text">You Win</h2></li>
+  <li><button class="btn btn__reset secondary-text game-play__btn">Play again</button></li>
+</ul>
+
+    <button class="btn btn__rules secondary-text game-play__btn">Rules</button>
 
   </section> 
 </main>  

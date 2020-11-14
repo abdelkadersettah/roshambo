@@ -8,4 +8,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  & > *:nth-child(1) {
+    transform: translate(-25%, 25%);
+  }
+  & > *:nth-child(3) {
+    transform: translate(25%, 25%);
+  }
 }
+
+// body > main > section.game-select > ul > li:nth-child(1)

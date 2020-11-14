@@ -1,0 +1,25 @@
+.game-play {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: var(--margin-lg);
+  height: 75vh;
+
+  &__user,
+  &__house,
+  &__result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__btn {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    margin-top: var(--margin-lg);
+  }
+  &__result {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+}

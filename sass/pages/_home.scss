@@ -3,7 +3,7 @@
   justify-content: space-between;
   @include border-base();
   border-radius: var(--radius-base);
-  padding: var(--padding-xlg) var(--padding-lg);
+  padding: var(--padding-base) var(--padding-sm);
   width: 90%;
   margin: 0 auto;
   margin-top: var(--margin-lg);
@@ -16,7 +16,7 @@
   &__score {
     background-color: var(--white);
     border-radius: 0.4em;
-    padding: var(--padding-xsm) var(--padding-xlg);
+    padding: 0 var(--padding-lg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,24 +25,26 @@
     // to decease height of score element
     line-height: initial;
     // increase size of score card
-    transform: scale(1.1, 1.4);
-
+    transform: scale(1, 1.1);
     &--title {
       color: var(--score-text-color);
       font-size: var(--font-size-sm);
-      letter-spacing: 0.2em;
+      letter-spacing: 0.1em;
     }
     &--number {
       color: var(--dark-text-color);
       font-size: var(--font-size-xlg);
       // increase size of score
-      transform: scale(1.5);
+      transform: scale(1.3);
     }
   }
 }
 .game-select {
+  margin-top: var(--margin-lg);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 70vh;
+}
+.game-select {
 }

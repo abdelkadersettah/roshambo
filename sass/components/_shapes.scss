@@ -7,11 +7,14 @@
   border-radius: 50%;
   &__img {
   }
+  &__text {
+    margin-top: var(--margin-xxlg);
+  }
 }
 [data-items='paper'] {
   /* Attribute has this exact value */
   @include gradient-radial-game-items(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  transform: translate(-25%, 25%);
+  //transform: translate(-25%, 25%);
 }
 [data-items='scissors'] {
   /* Attribute has this exact value */
@@ -24,5 +27,4 @@
 [data-items='rock'] {
   /* Attribute has this exact value */
   @include gradient-radial-game-items(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  transform: translate(25%, 25%);
 }
