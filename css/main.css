@@ -214,7 +214,6 @@ body {
   justify-items: center;
   padding: var(--padding-xlg) var(--padding-lg);
   position: absolute;
-  display: grid;
   left: 0;
   top: 0;
   bottom: 0;

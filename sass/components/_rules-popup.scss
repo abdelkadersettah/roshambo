@@ -5,7 +5,6 @@
   justify-items: center;
   padding: var(--padding-xlg) var(--padding-lg);
   position: absolute;
-  display: grid;
   @include respond(tab) {
     grid-template-columns: repeat(2, 1fr);
     width: max-content;
