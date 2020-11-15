@@ -214,6 +214,7 @@ body {
   justify-items: center;
   padding: var(--padding-xlg) var(--padding-lg);
   position: absolute;
+  display: grid;
   left: 0;
   top: 0;
   bottom: 0;
@@ -222,7 +223,6 @@ body {
 
 @media only screen and (min-width: 600px) {
   .rules-popup {
-    display: none;
     grid-template-columns: repeat(2, 1fr);
     width: max-content;
     border-radius: var(--radius-base);
