@@ -5,10 +5,19 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  @include respond(tab) {
+    order: 2;
+  }
   &__img {
   }
   &__text {
     margin-top: var(--margin-xxlg);
+    @include respond(tab) {
+      font-size: var(--font-size-lg);
+      margin-bottom: var(--margin-xlg);
+      margin-top: 0;
+      order: 1;
+    }
   }
 }
 [data-items='paper'] {
