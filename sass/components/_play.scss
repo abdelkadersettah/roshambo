@@ -24,6 +24,19 @@
       font-size: var(--font-size-lg);
     }
   }
+  &__user > li,
+  &__house > li {
+    transform: scale(1.3);
+  }
+
+  &__house {
+    @include respond(tab) {
+      grid-column: 3 /4;
+    }
+  }
+  &__result {
+    display: none;
+  }
   &__btn {
     &--rules {
       grid-column: 1 / span 2;
@@ -44,4 +57,12 @@
       grid-row: 1 / 2;
     }
   }
+}
+// box shadow for the winner
+// .game-play__user li {
+// }
+.winner {
+  box-shadow: 0em 0em 0.5em 1em rgba(96, 110, 133, 0.5),
+    0em 0em 0.6em 2em rgba(96, 110, 133, 0.2),
+    0em 0em 0.8em 3em rgba(96, 110, 133, 0.15);
 }
