@@ -7,7 +7,7 @@
   height: 75vh;
   @include respond(tab) {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 40em;
+    max-width: 65em;
     margin: 0 auto;
     height: initial;
     margin-top: var(--margin-xxlg);
@@ -35,7 +35,7 @@
     }
   }
   &__result {
-    display: none;
+    display: grid;
   }
   &__btn {
     &--rules {

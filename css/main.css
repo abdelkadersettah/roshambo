@@ -172,6 +172,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  background-color: var(--dark-text-color);
 }
 
 @media only screen and (min-width: 37.5em) {
@@ -292,7 +293,7 @@ body {
 @media only screen and (min-width: 37.5em) {
   .game-play {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 40em;
+    max-width: 65em;
     margin: 0 auto;
     height: initial;
     margin-top: var(--margin-xxlg);
@@ -323,7 +324,7 @@ body {
 }
 
 .game-play__result {
-  display: none;
+  display: grid;
 }
 
 .game-play__btn--rules {
