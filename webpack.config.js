@@ -16,4 +16,19 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            // Here you should change 'env' to '@babel/preset-env'
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
 };
