@@ -97,7 +97,7 @@ body {
   margin-top: var(--margin-lg);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .header {
     max-width: 37.5em;
     font-size: var(--font-size-lg);
@@ -175,7 +175,7 @@ body {
   background-color: var(--dark-text-color);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-shapes {
     order: 2;
   }
@@ -185,7 +185,7 @@ body {
   margin-top: var(--margin-xxlg);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-shapes__text {
     font-size: var(--font-size-lg);
     margin-bottom: var(--margin-xxlg);
@@ -243,7 +243,7 @@ body {
   right: 0;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .rules-popup {
     grid-template-columns: repeat(2, 1fr);
     width: max-content;
@@ -255,7 +255,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .rules-popup__img {
     order: 3;
     grid-column: 1 / span 2;
@@ -269,13 +269,13 @@ body {
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .rules-popup__text {
     justify-self: self-start;
   }
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .rules-popup__btn {
     justify-self: self-end;
   }
@@ -290,7 +290,7 @@ body {
   height: 75vh;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-play {
     grid-template-columns: repeat(3, 1fr);
     max-width: 65em;
@@ -306,7 +306,7 @@ body {
   justify-content: center;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-play__user, .game-play__house, .game-play__result {
     font-size: var(--font-size-lg);
   }
@@ -317,7 +317,7 @@ body {
   transform: scale(1.3);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-play__house {
     grid-column: 3 /4;
   }
@@ -333,7 +333,7 @@ body {
   margin-top: var(--margin-lg);
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-play__btn--rules {
     position: absolute;
     bottom: 10%;
@@ -346,7 +346,7 @@ body {
   justify-self: center;
 }
 
-@media only screen and (min-width: 37.5em) {
+@media only screen and (min-width: 43.75em) {
   .game-play__result {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
