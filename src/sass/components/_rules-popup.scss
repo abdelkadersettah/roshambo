@@ -1,6 +1,6 @@
 .rules-popup {
   background-color: var(--white);
-  display: none;
+  display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   padding: var(--padding-xlg) var(--padding-lg);

@@ -142,11 +142,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  display: none;
 }
 
 .game-menu {
-  background-image: url(/images/bg-triangle.svg);
+  background-image: url(../images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -172,6 +171,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  cursor: pointer;
   background-color: var(--dark-text-color);
 }
 
@@ -232,7 +232,7 @@ body {
 
 .rules-popup {
   background-color: var(--white);
-  display: none;
+  display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   padding: var(--padding-xlg) var(--padding-lg);
@@ -282,7 +282,7 @@ body {
 }
 
 .game-play {
-  display: grid;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
