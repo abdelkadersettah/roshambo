@@ -1,4 +1,4 @@
-import { elements } from './base';
+import { elements, elementsString } from './base';
 
 // function that render rules popup
 export const renderRules = (parent) => {
@@ -13,7 +13,10 @@ export const renderRules = (parent) => {
 
   parent.insertAdjacentHTML('beforeend', markup);
 };
+// delete rules popup elements from the dom
 export const deleteRules = () => {
-  const rulesContainer = document.querySelector('.rules-popup');
+  const rulesContainer = document.querySelector(
+    `.${elementsString.rulesPopupContainer}`
+  );
   rulesContainer.parentElement.removeChild(rulesContainer);
 };

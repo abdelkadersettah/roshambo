@@ -1,4 +1,3 @@
-import Rules from './models/Rules';
 import { elements, elementsString } from './views/base';
 import * as rulesView from './views/rulesView';
 /**
@@ -6,22 +5,26 @@ import * as rulesView from './views/rulesView';
  -Rules State
  */
 const state = {};
-// Rules controller ;
-state.rules = new Rules();
-state.rules.addRules(elements.rulesButtons);
-state.rules.rulesBTN.forEach((btn) => {
-  btn.ad;
-});
+// rulesView controller ;
 elements.body.addEventListener('click', (e) => {
+  const clickedElement = e.target;
+
   if (
-    e.target.matches(
+    clickedElement.matches(
       `.${elementsString.rulesBTN}, .${elementsString.rulesBTN} *`
     )
   ) {
+    // render rules PopUp to the UI
     rulesView.renderRules(elements.body);
   } else if (
-    e.target.matches(
+    // delete RUles PopUP from the UI
+    // if the users click on Close btn
+    clickedElement.matches(
       `.${elementsString.rulesCloseBTN}, .${elementsString.rulesCloseBTN} *`
+    ) ||
+    //or outside popup container
+    !clickedElement.matches(
+      `.${elementsString.rulesPopupContainer}, .${elementsString.rulesPopupContainer} *`
     )
   ) {
     rulesView.deleteRules();
