@@ -1,7 +1,6 @@
 export const elements = {
   body: document.querySelector('body'),
   main: document.querySelector('.main'),
-  playContainer: document.querySelector('.game-play'),
 };
 export const elementsString = {
   rulesBTN: 'btn__rules',
@@ -9,4 +8,5 @@ export const elementsString = {
   rulesPopupContainer: 'rules-popup',
   shapes: 'game-shapes',
   gameMenuContainer: 'game-select',
+  playContainer: 'game-play',
 };
