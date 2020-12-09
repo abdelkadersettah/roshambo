@@ -18,5 +18,7 @@ export const deleteRules = () => {
   const rulesContainer = document.querySelector(
     `.${elementsString.rulesPopupContainer}`
   );
-  rulesContainer.parentElement.removeChild(rulesContainer);
+  if (rulesContainer) {
+    rulesContainer.parentElement.removeChild(rulesContainer);
+  }
 };
