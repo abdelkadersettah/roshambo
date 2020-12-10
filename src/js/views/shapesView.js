@@ -27,14 +27,14 @@ export const renderPlayContainer = (parent) => {
 // render the shipe that clicked by users
 export const renderPlayerPick = (shape) => {
   const markup = `
-    <ul class="game-play__user">
-        <li class="game-shapes" data-items="${shape}">
-            <img class="game-shapes__img" src="./images/icon-${shape}.svg" alt="${shape}" srcset="">
-      </li>
-        <h2 class="secondary-text game-shapes__text">You picked</h2>
-    </ul> 
-    
-    `;
+      <ul class="game-play__user">
+          <li class="game-shapes" data-items="${shape}">
+              <img class="game-shapes__img" src="./images/icon-${shape}.svg" alt="${shape}" srcset="">
+        </li>
+          <h2 class="secondary-text game-shapes__text">You picked</h2>
+      </ul> 
+      
+      `;
   document
     .querySelector(`.${elementsString.playContainer}`)
     .insertAdjacentHTML('afterbegin', markup);
@@ -66,10 +66,11 @@ export const renderHousePick = (shape = '') => {
   }, 250);
 };
 
-// deleter Play Menu
+// delete Play Menu
 export const deletePlayersMenu = () => {
   const gameMenuContainer = document.querySelector(
     '.' + elementsString.gameMenuContainer
   );
+  if (!gameMenuContainer) return;
   gameMenuContainer.parentElement.removeChild(gameMenuContainer);
 };
