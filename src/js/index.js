@@ -1,7 +1,9 @@
 import Shapes from './models/Shapes';
+import Result from './models/Result';
 import { elements, elementsString } from './views/base';
 import * as rulesView from './views/rulesView';
 import * as shapesView from './views/shapesView';
+import * as resultView from './views/resultView';
 
 /**
  Global state of our APP
@@ -16,9 +18,8 @@ state.shape = new Shapes();
 shapesView.renderShapes(state.shape.shapes, elements.main);
 // render Rules Button
 rulesView.renderRulesBTN(elements.main);
-elements.main.addEventListener('click', (e) => {
+window.addEventListener('click', (e) => {
   const clickedElement = e.target;
-  console.log(e.target);
   if (
     clickedElement.matches(
       `.${elementsString.shapes}, .${elementsString.shapes} *`
@@ -38,11 +39,14 @@ elements.main.addEventListener('click', (e) => {
     shapesView.renderPlayContainer(elements.main);
     // render the player Pick
     shapesView.renderPlayerPick(state.shape.playerPick);
-    console.log(state);
     // render The House Pick
-    shapesView.renderHousePick();
+    shapesView.renderHousePick(state.shape.housePick);
+    //**************************************************** */
+    // Result Controller
+    state.result = new Result();
+    state.result.checkResult(state.shape.playerPick, state.shape.housePick);
     // render the result
-    shapesView.renderResult();
+    resultView.renderResult(state.result.result);
   }
 
   //**************************************************** */
@@ -53,7 +57,6 @@ elements.main.addEventListener('click', (e) => {
       `.${elementsString.rulesBTN}, .${elementsString.rulesBTN} *`
     )
   ) {
-    console.log(elements.main);
     // render rules PopUp to the UI
     rulesView.renderRules(elements.main);
   } else if (
@@ -69,4 +72,5 @@ elements.main.addEventListener('click', (e) => {
   ) {
     rulesView.deleteRules();
   }
+  console.log(clickedElement.classList);
 });

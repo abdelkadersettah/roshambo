@@ -43,7 +43,8 @@ export const renderPlayerPick = (shape) => {
 export const renderHousePick = (shape = '') => {
   const markup = `
     <ul class="game-play__house">
-        <li class="game-shapes" data-items="${shape}">
+        <li class="game-shapes" data-items="">
+
       </li>
         <h2 class="secondary-text game-shapes__text">The house picked</h2>
     </ul> 
@@ -52,18 +53,19 @@ export const renderHousePick = (shape = '') => {
   document.querySelector(
     `.${elementsString.playContainer}`
   ).innerHTML += markup;
-};
-// render the winners
-export const renderResult = () => {
-  const beforeSibling = document.querySelector('.game-play__user');
-  const markup = `
-    <ul class="game-play__result">
-    <li><h2 class="game-play__result--text primary-text">You Win</h2></li>
-    <li><button class="btn btn__reset secondary-text game-play__btn--reset">Play again</button></li>
-  </ul>
+  setTimeout(() => {
+    const markup = `
+        <li class="game-shapes" data-items="${shape}">
+        <img class="game-shapes__img" src="./images/icon-${shape}.svg" alt="${shape}" srcset="">
+
+      </li>
+        <h2 class="secondary-text game-shapes__text">The house picked</h2>
+    
     `;
-  beforeSibling.insertAdjacentHTML('afterend', markup);
+    document.querySelector('.game-play__house').innerHTML = markup;
+  }, 250);
 };
+
 // deleter Play Menu
 export const deletePlayersMenu = () => {
   const gameMenuContainer = document.querySelector(
