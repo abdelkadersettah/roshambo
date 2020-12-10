@@ -3,8 +3,14 @@
   border-radius: var(--radius-base);
   &__rules {
     @include border-base(2px);
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    bottom: 3%;
+    right: 50%;
+    transform: translateX(50%);
+    @include respond(tab) {
+      right: 5%;
+      transform: translateX(0);
+    }
   }
   &__reset {
     padding: 0.8em 2.2em;

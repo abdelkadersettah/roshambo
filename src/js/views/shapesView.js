@@ -15,13 +15,7 @@ export const renderShapes = (shapes, container) => {
     `;
   container.insertAdjacentHTML('afterbegin', markup);
 };
-export const renderRulesBTN = (container) => {
-  const markup = `
-    <button class="game-menu__btn btn btn__rules secondary-text">Rules</button>
-
-    `;
-  container.insertAdjacentHTML('beforeend', markup);
-};
+// render Menu play Container
 export const renderPlayContainer = (parent) => {
   const markup = `
     <section class="game-play">
@@ -30,6 +24,7 @@ export const renderPlayContainer = (parent) => {
     `;
   parent.insertAdjacentHTML('afterbegin', markup);
 };
+// render the shipe that clicked by users
 export const renderPlayerPick = (shape) => {
   const markup = `
     <ul class="game-play__user">
@@ -44,9 +39,10 @@ export const renderPlayerPick = (shape) => {
     .querySelector(`.${elementsString.playContainer}`)
     .insertAdjacentHTML('afterbegin', markup);
 };
+// Render the house choose
 export const renderHousePick = (shape = '') => {
   const markup = `
-    <ul class="game-play__user">
+    <ul class="game-play__house">
         <li class="game-shapes" data-items="${shape}">
       </li>
         <h2 class="secondary-text game-shapes__text">The house picked</h2>
@@ -57,6 +53,7 @@ export const renderHousePick = (shape = '') => {
     `.${elementsString.playContainer}`
   ).innerHTML += markup;
 };
+// render the winners
 export const renderResult = () => {
   const beforeSibling = document.querySelector('.game-play__user');
   const markup = `
@@ -67,6 +64,7 @@ export const renderResult = () => {
     `;
   beforeSibling.insertAdjacentHTML('afterend', markup);
 };
+// deleter Play Menu
 export const deletePlayersMenu = () => {
   const gameMenuContainer = document.querySelector(
     '.' + elementsString.gameMenuContainer
