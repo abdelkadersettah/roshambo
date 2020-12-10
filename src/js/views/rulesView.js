@@ -3,6 +3,8 @@ import { elements, elementsString } from './base';
 // function that render rules popup
 export const renderRules = (parent) => {
   // markup for our Rules-popup
+  const rulesPopUP = document.querySelector('.rules-popup');
+  if (rulesPopUP) return;
   const markup = `
     <div class="rules-popup">
     <h2 class="rules-popup__text">Rules</h2>
