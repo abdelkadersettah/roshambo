@@ -1,6 +1,6 @@
 export default class Shapes {
   constructor() {
-    this.shapes = ['paper', 'scissors', 'rock'];
+    this.shapes = ['paper', 'scissors', 'rock', 'spock', 'lizard'];
     this.playerPick = null;
   }
   getPlayerPick(shape) {

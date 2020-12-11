@@ -3,20 +3,40 @@
 - Rock beats Scissors
 - Scissors beats Paper
 */
+/*
+- Scissors beats Paper
+- Paper beats Rock
+- Rock beats Lizard
+- Lizard beats Spock
+- Spock beats Scissors
+- Scissors beats Lizard
+- Paper beats Spock
+- Rock beats Scissors
+- Lizard beats Paper
+- Spock beats Rock
+*/
 export default class Result {
   constructor() {
     this.resultRules = {
       paper: {
-        win: ['rock'],
-        lose: ['scissors'],
+        win: ['rock', 'spock'],
+        lose: ['scissors', 'lizard'],
       },
       rock: {
-        win: ['scissors'],
-        lose: ['paper'],
+        win: ['scissors', 'lizard'],
+        lose: ['paper', 'spock'],
       },
       scissors: {
-        win: ['paper'],
-        lose: ['rock'],
+        win: ['paper', 'lizard'],
+        lose: ['rock', 'spock'],
+      },
+      lizard: {
+        win: ['paper', 'spock'],
+        lose: ['rock', 'scissors'],
+      },
+      spock: {
+        win: ['rock', 'scissors'],
+        lose: ['paper', 'lizard'],
       },
     };
   }
@@ -26,6 +46,7 @@ export default class Result {
     for (let i in userPick) {
       if (~userPick[i].indexOf(house)) {
         this.result = i;
+        console.log((this.result = i));
       }
     }
   }
