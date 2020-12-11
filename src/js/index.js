@@ -1,9 +1,11 @@
 import Shapes from './models/Shapes';
 import Result from './models/Result';
+import Score from './models/Score';
 import { elements, elementsString } from './views/base';
 import * as rulesView from './views/rulesView';
 import * as shapesView from './views/shapesView';
 import * as resultView from './views/resultView';
+import * as scoreView from './views/scoreView';
 
 /**
  Global state of our APP
@@ -48,6 +50,13 @@ window.addEventListener('click', (e) => {
       state.result.checkResult(state.shape.playerPick, state.shape.housePick);
       // render the result
       resultView.renderResult(state.result.result);
+      //**************************************************** */
+      // Score Controller
+      state.score = new Score();
+      // update the score number
+      state.score.updateScores(state.result.result);
+      // Render the score in UI
+      scoreView.renderGameScore(state.score.score);
     }
   }
 

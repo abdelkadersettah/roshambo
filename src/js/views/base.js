@@ -1,6 +1,7 @@
 export const elements = {
   body: document.querySelector('body'),
   main: document.querySelector('.main'),
+  gameScore: document.querySelector('.header__score--number'),
 };
 export const elementsString = {
   rulesBTN: 'btn__rules',
