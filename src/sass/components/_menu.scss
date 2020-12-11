@@ -1,18 +1,31 @@
 .game-menu {
-  background-image: url(../images/bg-triangle.svg);
+  background-image: url(../images/bg-pentagon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   max-width: 16em;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   & > *:nth-child(1) {
-    transform: translate(-25%, 25%);
+    transform: translate(50%, 0%);
+  }
+  & > *:nth-child(2) {
+    // transform: translate(25%, 25%);
+    transform: translate(75%, 75%);
   }
   & > *:nth-child(3) {
-    transform: translate(25%, 25%);
+    // transform: translate(25%, 25%);
+    transform: translate(125%, 100%);
+  }
+  & > *:nth-child(4) {
+    // transform: translate(25%, 25%);
+    transform: translate(-125%, 100%);
+  }
+  & > *:nth-child(5) {
+    // transform: translate(25%, 25%);
+    transform: translate(-75%, -125%);
   }
 }
 

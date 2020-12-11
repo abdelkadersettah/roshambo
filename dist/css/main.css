@@ -145,23 +145,35 @@ body {
 }
 
 .game-menu {
-  background-image: url(../images/bg-triangle.svg);
+  background-image: url(../images/bg-pentagon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   max-width: 16em;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .game-menu > *:nth-child(1) {
-  transform: translate(-25%, 25%);
+  transform: translate(50%, 0%);
+}
+
+.game-menu > *:nth-child(2) {
+  transform: translate(75%, 75%);
 }
 
 .game-menu > *:nth-child(3) {
-  transform: translate(25%, 25%);
+  transform: translate(125%, 100%);
+}
+
+.game-menu > *:nth-child(4) {
+  transform: translate(-125%, 100%);
+}
+
+.game-menu > *:nth-child(5) {
+  transform: translate(-75%, -125%);
 }
 
 .game-shapes {
@@ -175,9 +187,26 @@ body {
   background-color: var(--dark-text-color);
 }
 
+@media only screen and (max-width: 31.25em) {
+  .game-shapes {
+    /* for small device 
+    height: 20vw;
+    width: 20vw;
+    */
+    height: 25vw;
+    width: 25vw;
+  }
+}
+
 @media only screen and (min-width: 43.75em) {
   .game-shapes {
     order: 2;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .game-shapes__img {
+    width: 50%;
   }
 }
 
@@ -202,15 +231,21 @@ body {
 [data-items='scissors'] {
   /* Attribute has this exact value */
   background-image: radial-gradient(circle at center, white 50%, #ec9e0e 50%, #eca922);
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 2;
-  align-self: center;
-  justify-self: center;
 }
 
 [data-items='rock'] {
   /* Attribute has this exact value */
   background-image: radial-gradient(circle at center, white 50%, #dc2e4e 50%, #dd405d);
+}
+
+[data-items='lizard'] {
+  /* Attribute has this exact value */
+  background-image: radial-gradient(circle at center, white 50%, #834fe3 50%, #8c5de5);
+}
+
+[data-items='spock'] {
+  /* Attribute has this exact value */
+  background-image: radial-gradient(circle at center, white 50%, #40b9ce 50%, #52bed1);
 }
 
 .btn {
@@ -313,6 +348,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (min-width: 43.75em) {

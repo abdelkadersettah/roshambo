@@ -1,6 +1,14 @@
 .game-shapes {
   height: 8em;
   width: 8em;
+  @include respond(sm) {
+    /* for small device 
+    height: 20vw;
+    width: 20vw;
+    */
+    height: 25vw;
+    width: 25vw;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +19,9 @@
     order: 2;
   }
   &__img {
+    @include respond(sm) {
+      width: 50%;
+    }
   }
   &__text {
     margin-top: var(--margin-xxlg);
@@ -25,17 +36,20 @@
 [data-items='paper'] {
   /* Attribute has this exact value */
   @include gradient-radial-game-items(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  //transform: translate(-25%, 25%);
 }
 [data-items='scissors'] {
   /* Attribute has this exact value */
   @include gradient-radial-game-items(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  grid-column: 1 / span 2;
-  grid-row: 2 / span 2;
-  align-self: center;
-  justify-self: center;
 }
 [data-items='rock'] {
   /* Attribute has this exact value */
   @include gradient-radial-game-items(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+[data-items='lizard'] {
+  /* Attribute has this exact value */
+  @include gradient-radial-game-items(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+}
+[data-items='spock'] {
+  /* Attribute has this exact value */
+  @include gradient-radial-game-items(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
 }
