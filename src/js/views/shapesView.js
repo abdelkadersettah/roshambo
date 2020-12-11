@@ -74,3 +74,11 @@ export const deletePlayersMenu = () => {
   if (!gameMenuContainer) return;
   gameMenuContainer.parentElement.removeChild(gameMenuContainer);
 };
+// delete Game-play
+export const deleteGamePlay = () => {
+  const gamePlayContainer = document.querySelector(
+    `.${elementsString.playContainer}`
+  );
+  if (!gamePlayContainer) return;
+  gamePlayContainer.parentElement.removeChild(gamePlayContainer);
+};

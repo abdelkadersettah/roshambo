@@ -16,6 +16,7 @@ import * as scoreView from './views/scoreView';
 const state = {};
 // render game Menu
 state.shape = new Shapes();
+state.score = new Score();
 
 shapesView.renderShapes(state.shape.shapes, elements.main);
 // render Rules Button
@@ -52,12 +53,24 @@ window.addEventListener('click', (e) => {
       resultView.renderResult(state.result.result);
       //**************************************************** */
       // Score Controller
-      state.score = new Score();
       // update the score number
       state.score.updateScores(state.result.result);
       // Render the score in UI
       scoreView.renderGameScore(state.score.score);
     }
+  }
+  // Reset THE Game:
+  if (
+    clickedElement.matches(
+      `.${elementsString.resetBTN}, .${elementsString.resetBTN} *`
+    )
+  ) {
+    e.preventDefault();
+    console.log('reset clicked');
+    state.shape.resetGame();
+    shapesView.deleteGamePlay();
+    shapesView.renderShapes(state.shape.shapes, elements.main);
+    console.log(state.shape);
   }
 
   //**************************************************** */

@@ -10,4 +10,5 @@ export const elementsString = {
   shapes: 'game-shapes',
   gameMenuContainer: 'game-select',
   playContainer: 'game-play',
+  resetBTN: 'btn__reset',
 };

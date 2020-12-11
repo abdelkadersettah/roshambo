@@ -16,4 +16,8 @@ export default class Shapes {
       this.housePick = newShapes[randomIndex];
     }
   }
+  resetGame() {
+    this.playerPick = null;
+    this.housePick = null;
+  }
 }
