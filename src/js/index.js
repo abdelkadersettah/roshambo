@@ -21,6 +21,12 @@ state.score = new Score();
 shapesView.renderShapes(state.shape.shapes, elements.main);
 // render Rules Button
 rulesView.renderRulesBTN(elements.main);
+// check if score is saved in localStorage;
+if (scoreView.getScoreFromLocalStorage()) {
+  const score = +scoreView.getScoreFromLocalStorage();
+  state.score.score = score;
+  scoreView.renderGameScore(score);
+}
 window.addEventListener('click', (e) => {
   const clickedElement = e.target;
   if (
@@ -55,6 +61,8 @@ window.addEventListener('click', (e) => {
       // Score Controller
       // update the score number
       state.score.updateScores(state.result.result);
+      // add Score to localStorage
+      scoreView.addScoreToLocalStorage(state.score.score);
       // Render the score in UI
       scoreView.renderGameScore(state.score.score);
     }
@@ -66,11 +74,9 @@ window.addEventListener('click', (e) => {
     )
   ) {
     e.preventDefault();
-    console.log('reset clicked');
     state.shape.resetGame();
     shapesView.deleteGamePlay();
     shapesView.renderShapes(state.shape.shapes, elements.main);
-    console.log(state.shape);
   }
 
   //**************************************************** */
