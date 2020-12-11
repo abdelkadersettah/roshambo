@@ -8,7 +8,7 @@ export const renderRules = (parent) => {
   const markup = `
     <div class="rules-popup">
     <h2 class="rules-popup__text">Rules</h2>
-  <img src="./images/image-rules.svg" alt="" class="rules-popup__img">  
+  <img src="./images/image-rules-bonus.svg" alt="" class="rules-popup__img">  
   <button class="rules-popup__btn rules-popup__btn--close"><img src="./images/icon-close.svg " alt="close Icone" srcset=""></button>
   </div> 
     `;
