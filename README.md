@@ -21,10 +21,12 @@ players are able to:
 - Play Rock, Paper, Scissors against the computer
 - Maintain the state of the score after refreshing the browser
 
-  ## Rules
+you can try the game in this link [roshambo](https://abdelkadersettah.github.io/roshambo/)
 
-  If the player wins, they gain 1 point. If the computer wins, the player loses one point.
-  To give you an idea on how you’re going to play this game, then here are the lists of some of the rules you need to consider before and while playing this Rock-Paper-Scissors-Stone-Lizard-Spock and these include the following:
+## Rules
+
+If the player wins, they gain 1 point. If the computer wins, the player loses one point.
+To give you an idea on how you’re going to play this game, then here are the lists of some of the rules you need to consider before and while playing this Rock-Paper-Scissors-Stone-Lizard-Spock and these include the following:
 
 - Scissors beats Paper
 - Paper beats Rock
