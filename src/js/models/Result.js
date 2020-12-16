@@ -46,7 +46,6 @@ export default class Result {
     for (let i in userPick) {
       if (~userPick[i].indexOf(house)) {
         this.result = i;
-        console.log((this.result = i));
       }
     }
   }
